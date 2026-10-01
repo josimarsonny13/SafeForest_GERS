@@ -16,7 +16,6 @@ jobs:
         with:
           channel: stable
       - name: Preparar e gerar APK
-        working-directory: SafeForest_GERS
         run: |
           flutter config --no-analytics
           flutter pub get
@@ -27,4 +26,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: SafeForest-GERS-APK
-          path: SafeForest_GERS/build/app/outputs/flutter-apk/app-release.apk
+          path: build/app/outputs/flutter-apk/app-release.apk
