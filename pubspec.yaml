@@ -1,0 +1,29 @@
+name: safe_forest
+description: Safe Forest - G.E.R.S. FLORESTAL
+publish_to: "none"
+version: 2.0.0+2
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.5.3
+  image_picker: ^1.1.2
+  geolocator: ^14.0.2
+  share_plus: ^11.1.0
+  path_provider: ^2.1.5
+  crypto: ^3.0.6
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.14.4
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/gers_logo.jpg
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: assets/images/gers_logo.jpg
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: assets/images/gers_logo.jpg

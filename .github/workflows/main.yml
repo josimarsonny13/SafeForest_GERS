@@ -1,0 +1,30 @@
+name: Gerar APK Safe Forest
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - name: Preparar e gerar APK
+        working-directory: SafeForest_GERS
+        run: |
+          flutter config --no-analytics
+          flutter pub get
+          flutter create --platforms=android .
+          flutter pub get
+          dart run flutter_launcher_icons
+          flutter build apk --release
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SafeForest-GERS-APK
+          path: SafeForest_GERS/build/app/outputs/flutter-apk/app-release.apk
