@@ -1,29 +1,35 @@
-name: safe_forest
-description: Safe Forest - G.E.R.S. FLORESTAL
-publish_to: "none"
-version: 2.0.0+2
+name: safeforest_gers
+description: Safe Forest - Sistema de Gestão de Ocorrências e Segurança no Trabalho da G.E.R.S Florestal
+publish_to: 'none'
+version: 1.0.0+1
+ 
 environment:
-  sdk: ">=3.4.0 <4.0.0"
+  sdk: ">=3.4.0 <5.0.0"
+ 
 dependencies:
   flutter:
     sdk: flutter
-  shared_preferences: ^2.5.3
+  crypto: ^3.0.5
+  geolocator: ^14.0.0
   image_picker: ^1.1.2
-  geolocator: ^14.0.2
-  share_plus: ^11.1.0
-  path_provider: ^2.1.5
-  crypto: ^3.0.6
+  path_provider: ^2.1.4
+  share_plus: ^11.0.0
+  shared_preferences: ^2.3.2
+ 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: ^0.14.4
+ 
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/gers_logo.jpg
+    - assets/images/
+ 
 flutter_launcher_icons:
   android: true
   ios: false
   image_path: "assets/images/icone_logo.png"
   adaptive_icon_background: "#00000000"
   adaptive_icon_foreground: "assets/images/icone_foreground.png"
+ 
